@@ -1,8 +1,8 @@
-project(XBrew)
+project(XSampleProject)
 
 cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${NXDK_DIR}/share/cmake/Modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_LIST_DIR}/share/cmake/Modules/")
 
 # Add all *.cpp files in the src directory to the project
 file(GLOB_RECURSE SRC_FILES
