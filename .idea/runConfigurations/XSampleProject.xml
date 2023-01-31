@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="XSampleProject" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-cpu pentium3 -machine &quot;xbox,bootrom=$USER_HOME$/Projects/XBox/Xemu/XEMU/Boot ROM image/mcpx_1.0.bin,short_animation&quot; -m 128 -bios &quot;$USER_HOME$/Projects/XBox/Xemu/XEMU/BIOS/Complex_4627v1.03.bin&quot; -drive &quot;index=0,media=disk,file=$USER_HOME$/Projects/XBox/Xemu/XEMU/Pre-built Xbox HDD image/xbox_hdd.qcow2,locked&quot; -drive &quot;index=1,media=cdrom,file=$CMakeCurrentBuildDir$/XBrew.iso&quot; -qmp tcp:localhost:4444,server,nowait -display sdl -device usb-hub,port=3 -device usb-xbox-gamepad,port=3.1 -gdb tcp::1234" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="XBrew" TARGET_NAME="XBrew" CONFIG_NAME="Debug" RUN_PATH="$XQEMU$">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
