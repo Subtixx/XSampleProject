@@ -24,7 +24,8 @@ target_link_libraries(${PROJECT_NAME} SDL2::SDL2 NXDK::NXDK)
 
 #$(NXDK_DIR)/tools/cxbe/cxbe
 #$(VE)$(CXBE) -OUT:$@ -TITLE:$(XBE_TITLE) $< $(QUIET)
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND
-        ${NXDK_DIR}/tools/cxbe/cxbe -OUT:${CMAKE_BINARY_DIR}/bin/default.xbe -TITLE:${PROJECT_NAME} ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.exe
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD 
+        COMMAND mkdir -p ${CMAKE_BINARY_DIR}/bin
+        COMMAND ${NXDK_DIR}/tools/cxbe/cxbe -OUT:${CMAKE_BINARY_DIR}/bin/default.xbe -TITLE:${PROJECT_NAME} ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.exe
         COMMAND ${NXDK_DIR}/tools/extract-xiso/build/extract-xiso -c ${CMAKE_BINARY_DIR}/bin ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.iso
         )
